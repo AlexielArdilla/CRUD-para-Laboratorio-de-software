@@ -1,0 +1,31 @@
+*{ text-align: center;}
+
+h1{
+    background-color: black;
+    color: white;
+    padding: 20px;
+
+}
+
+button{
+    background-color: brown;
+    color: aliceblue;
+    padding: 15px;
+}
+button:hover{
+    background-color: blueviolet;
+    color: azure;
+    padding: 16px;
+}
+
+ul{
+    list-style-type: none;
+    background: #3399ff;
+  padding: 20px;
+}
+
+ul li {
+    background: #cce5ff;
+    color: darkblue;
+    margin: 5px;
+  }
