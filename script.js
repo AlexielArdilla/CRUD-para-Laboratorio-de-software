@@ -38,6 +38,7 @@ let respuesta = 0;
         } else if (respuesta === 3) {
             alert("Gracias por usar esta aplicación");
             document.getElementById("clientesLista").innerHTML ="";
+            clientes = [];
         } else {
             alert("Opción no válida");
         }
@@ -50,6 +51,7 @@ function mostrarClientes() {
     document.getElementById("clientesLista").innerHTML = crearTextoEnHTML();
 
 }
+
 
 function crearTextoEnHTML() {
 
