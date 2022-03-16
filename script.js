@@ -14,15 +14,15 @@ let clientes = [];
 
 function comenzar() {
 
-let respuesta = 0;
+    let respuesta = 0;
 
-    while (respuesta != 3){
-     respuesta = parseInt(prompt("Qué quiere reealizar a continuación:\n"
-        + "1) Ingresar datos de un cliente"
-        + "2) Ver los clientes ingresados"
-        + "3) Salir."));
+    while (respuesta != 3) {
+        respuesta = parseInt(prompt("Qué quiere reealizar a continuación:\n"
+            + "1) Ingresar datos de un cliente"
+            + "2) Ver los clientes ingresados"
+            + "3) Salir."));
 
-   
+
         if (respuesta === 1) {
 
             alert("Se le pedirán los datos de un cliente:");
@@ -31,18 +31,22 @@ let respuesta = 0;
             let edadCliente = prompt("Ingrese la edad del cliente");
             let miCliente = new cliente(nombreCliente, edadCliente);
             clientes.push(miCliente);
-           
+
         } else if (respuesta === 2) {
-            mostrarClientes();
+            if (clientes.length > 0) {
+                mostrarClientes()
+            } else {
+                document.getElementById("clientesLista").innerHTML = "<p>Codeado con amor por Alejandro G. Vera</p>";
+            }
             break;
         } else if (respuesta === 3) {
             alert("Gracias por usar esta aplicación");
-            document.getElementById("clientesLista").innerHTML ="<p>Codeado con amor por Alejandro G. Vera</p>";
+            document.getElementById("clientesLista").innerHTML = "<p>Codeado con amor por Alejandro G. Vera</p>";
             clientes = [];
         } else {
             alert("Opción no válida");
         }
-    } 
+    }
 }
 
 
@@ -63,7 +67,7 @@ function crearTextoEnHTML() {
             + "Nombre y Apellido: " + clientes[i].nombreYApellido
             + " Edad: " + clientes[i].edad
             + "</li>"
-            
+
 
     }
 
