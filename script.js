@@ -37,7 +37,7 @@ let respuesta = 0;
             break;
         } else if (respuesta === 3) {
             alert("Gracias por usar esta aplicación");
-            document.getElementById("clientesLista").innerHTML ="";
+            document.getElementById("clientesLista").innerHTML ="<p>Codeado con amor por Alejandro G. Vera</p>";
             clientes = [];
         } else {
             alert("Opción no válida");
